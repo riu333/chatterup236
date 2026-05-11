@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ChatterUp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Onboarding Modal -->
+  <div id="onboardingModal" class="modal">
+    <div class="modal-content">
+      <h2>Welcome to ChatterUp!</h2>
+      <input type="text" id="usernameInput" placeholder="Enter your name" />
+      <button id="startChatBtn">Start Chatting</button>
+    </div>
+  </div>
+
+  <!-- Main Chat Container -->
+  <div id="chatContainer" class="hidden">
+    <div class="sidebar">
+      <h3>Online Users</h3>
+      <ul id="userList"></ul>
+    </div>
+
+    <div class="chat-main">
+      <div class="chat-header">
+        <h2 id="welcomeMessage"></h2>
+      </div>
+
+      <div class="chat-box" id="chatBox"></div>
+
+      <div id="typingIndicator"></div>
+
+      <form id="messageForm">
+        <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off" />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
